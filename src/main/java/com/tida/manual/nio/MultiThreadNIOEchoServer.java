@@ -52,11 +52,11 @@ public class MultiThreadNIOEchoServer {
             EchoClient echoClient=(EchoClient)sk.attachment();
 
             String outstr=Utils.byteBufferToString(bb);
-            System.out.println("read data:"+outstr);
+            System.out.println("read val:"+outstr);
 
             echoClient.enqueue(bb);
 
-            //we've enqueued data to be written to the client,we must
+            //we've enqueued val to be written to the client,we must
             //not set interest in OP_WRITE
             sk.interestOps(SelectionKey.OP_READ|SelectionKey.OP_WRITE);
             selector.wakeup();
@@ -98,7 +98,7 @@ public class MultiThreadNIOEchoServer {
         try {
             len=channel.read(bb);
 //            String outstr=Utils.byteBufferToString(bb);
-//            System.out.println("read data:"+outstr);
+//            System.out.println("read val:"+outstr);
             if(len<0){
                 disconnect(sk);
                 return;

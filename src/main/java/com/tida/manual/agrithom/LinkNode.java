@@ -12,16 +12,16 @@ package com.tida.manual.agrithom;/**
  **/
 class LinkNode<T> implements Comparable {
 
-    public T data;
-    public LinkNode nextNode;
-    public LinkNode(T data){this.data=data;}
+    public T val;
+    public LinkNode next;
+    public LinkNode(T data){this.val =data;}
 
     @Override
     public int compareTo(Object o) {
         LinkNode o2=(LinkNode)o;
-        if((Integer)this.data>(Integer)o2.data){
+        if((Integer)this.val >(Integer)o2.val){
             return 1;
-        }else if((Integer)this.data < (Integer)o2.data) {
+        }else if((Integer)this.val < (Integer)o2.val) {
             return -1;
         }else {
             return 0;

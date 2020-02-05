@@ -1,7 +1,5 @@
 package com.tida.manual.agrithom;
 
-import com.tida.manual.agrithom.LinkNode;
-
 /**
  * @ClassName Solution01
  * @Description 在链表中删除倒数n的节点
@@ -18,23 +16,23 @@ class Solution01 {
         //get length of linknode
         int length=0;
         if(nth<=0){
-            throw new Exception("error input data");
+            throw new Exception("error input val");
         }
         end=before=head;
         while(before!=null){
-            before=before.nextNode;
+            before=before.next;
             length++;
         }
         if(length==nth){
-            head=head.nextNode;
+            head=head.next;
             return head;
         }
         int removeNth=length-nth-1;//倒数第n个节点
         while(removeNth>0){
-            end=end.nextNode;
+            end=end.next;
             removeNth--;
         }
-        end.nextNode=end.nextNode.nextNode;
+        end.next =end.next.next;
         return head;
     }
 }

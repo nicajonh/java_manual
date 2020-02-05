@@ -2,8 +2,6 @@ package com.tida.manual.agrithom;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by Administrator on 2020/1/28.
  * Description ${TEXT}
@@ -23,15 +21,15 @@ public class Solution01Test {
                 curr=head;
             }else{
                 LinkNode linkNode=new LinkNode(i);
-                curr.nextNode=linkNode;
-                curr=curr.nextNode;
+                curr.next =linkNode;
+                curr=curr.next;
             }
         }
         Solution01 solution01 = new Solution01();
         LinkNode newhead=solution01.removeNthFromEnd(head,2);
         while(newhead!=null){
-            System.out.println(newhead.data);
-            newhead=newhead.nextNode;
+            System.out.println(newhead.val);
+            newhead=newhead.next;
             length++;
         }
         System.out.println("length of linkNode is"+' '+length);

@@ -99,6 +99,7 @@ class Solution06 {
             if(num>columnSize){
                 break;
             }
+            //取出改组后续元素,继续放入最大堆中
             d.setValue(data[d.getSource()][d.getSourceIndex()+1]);
             d.setSourceIndex(d.getSourceIndex()+1);
             maxHeap.add(d);

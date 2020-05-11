@@ -1,4 +1,4 @@
-package com.tida.manual;/**
+package com.tida.manual.pattern;/**
  * Created by Administrator on 2020/4/21.
  * Description ${TEXT}
  */

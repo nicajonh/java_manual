@@ -13,20 +13,20 @@ public class Solution01Test {
     public void TestSolution01() throws Exception {
 
         int length=0;
-        LinkNode head = null;
-        LinkNode curr = null;
-        for(char i='A';i<='F';i++){
+        ListNode head = null;
+        ListNode curr = null;
+        for(char i='1';i<='2';i++){
             if(head==null){
-                head=new LinkNode(i);
+                head=new ListNode(i);
                 curr=head;
             }else{
-                LinkNode linkNode=new LinkNode(i);
+                ListNode linkNode=new ListNode(i);
                 curr.next =linkNode;
                 curr=curr.next;
             }
         }
         Solution01 solution01 = new Solution01();
-        LinkNode newhead=solution01.removeNthFromEnd(head,2);
+        ListNode newhead=solution01.removeNthFromEnd(head,2);
         while(newhead!=null){
             System.out.println(newhead.val);
             newhead=newhead.next;

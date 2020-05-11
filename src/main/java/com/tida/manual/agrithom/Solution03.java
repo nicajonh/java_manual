@@ -5,13 +5,13 @@ package com.tida.manual.agrithom;/**
 
 /**
  * @ClassName findMedianSortedArrays
- * @Description 合并 k 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度
+ * @Description 合并 k 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度,分治思想
  * @Author nicajonh
  * @Date 2019/5/7 17:28
  * @Version 1.0
  **/
 class Solution03 {
-    public LinkNode mergeKLists(LinkNode[] lists) {
+    public ListNode mergeKLists(ListNode[] lists) {
         if(lists.length==0)
             return null;
         int left = 0;
@@ -31,9 +31,9 @@ class Solution03 {
         }
         return lists[0];
     }
-    public LinkNode mergeTwoLists(LinkNode l1, LinkNode l2) {
-        LinkNode l3 = new LinkNode(0);
-        LinkNode l4 = l3;
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode l3 = new ListNode(0);
+        ListNode l4 = l3;
         while(l1!=null&&l2!=null)
         {
             if((Integer)l1.val > (Integer)l2.val)

@@ -14,15 +14,15 @@ import java.util.PriorityQueue;
  * @Version 1.0
  **/
 class Solution04 {
-    public LinkNode mergeKLists(LinkNode[] lists) {
+    public ListNode mergeKLists(ListNode[] lists) {
         int len = lists.length;
         if (len == 0) {
             return null;
         }
-        PriorityQueue<LinkNode> priorityQueue = new PriorityQueue<LinkNode>(len, Comparator.comparingInt(a -> (int) a.val));
-        LinkNode dummyNode = new LinkNode(-1);
-        LinkNode curNode = dummyNode;
-        for (LinkNode list : lists) {
+        PriorityQueue<ListNode> priorityQueue = new PriorityQueue<ListNode>(len, Comparator.comparingInt(a -> (int) a.val));
+        ListNode dummyNode = new ListNode(-1);
+        ListNode curNode = dummyNode;
+        for (ListNode list : lists) {
             if (list != null) {
                 // 这一步很关键，不能也没有必要将空对象添加到优先队列中
                 priorityQueue.add(list);
@@ -30,7 +30,7 @@ class Solution04 {
         }
         while (!priorityQueue.isEmpty()) {
             // 优先队列非空才能出队
-            LinkNode node = priorityQueue.poll();
+            ListNode node = priorityQueue.poll();
             // 当前节点的 next 指针指向出队元素
             curNode.next = node;
             // 当前指针向前移动一个元素，指向了刚刚出队的那个元素

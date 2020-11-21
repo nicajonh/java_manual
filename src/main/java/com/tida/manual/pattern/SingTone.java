@@ -31,6 +31,7 @@ class InstanceHolder{
 
     private InstanceHolder(){}
     private static class Inner{
+        //实列化
         private static final InstanceHolder instanceHolder = new InstanceHolder();
     }
     public InstanceHolder getInstance(){

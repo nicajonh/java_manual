@@ -12,12 +12,12 @@ package com.tida.manual.pattern;/**
  **/
 
 interface MediaPlayer{
-    public void play(String audioType,String filename);
+    void play(String audioType,String filename);
 }
 
 interface AdvancedMediaPlayer {
-    public void playVlc(String fileName);
-    public void playMp4(String fileName);
+    void playVlc(String fileName);
+    void playMp4(String fileName);
 }
 class AdapterPatterDemo {
 }

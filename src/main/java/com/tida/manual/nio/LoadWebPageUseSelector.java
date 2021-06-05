@@ -90,7 +90,8 @@ public class LoadWebPageUseSelector {
         }
 
     }
-    private void register(Selector selector,SocketAddress address) throws IOException {
+
+    private void register(Selector selector, SocketAddress address) throws IOException {
         SocketChannel channel = SocketChannel.open();
 
         //设置为阻塞模式
@@ -100,7 +101,7 @@ public class LoadWebPageUseSelector {
         channel.register(selector, SelectionKey.OP_ACCEPT | SelectionKey.OP_READ);
     }
 
-    private Map<SocketAddress,String> urlToSocketAddress(Set<URL> urls){
+    private Map<SocketAddress, String> urlToSocketAddress(Set<URL> urls) {
         Map<SocketAddress, String> mapping = new HashMap<>();
         for (URL url : urls) {
             int port = url.getPort() != -1 ? url.getPort() : url.getDefaultPort();

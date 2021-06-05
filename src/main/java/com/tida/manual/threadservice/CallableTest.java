@@ -1,7 +1,6 @@
 package com.tida.manual.threadservice;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 
 
@@ -26,7 +25,7 @@ import java.util.concurrent.FutureTask;
 		 ExecutorService es = Executors.newSingleThreadExecutor();
 
         //创建Callable对象任务  
-        MyCallable calTask=new MyCallable();
+        MyCallableMockDataOne calTask=new MyCallableMockDataOne();
         //创建FutureTask  
         FutureTask<Integer> futureTask=new FutureTask<>(calTask);
         //执行任务

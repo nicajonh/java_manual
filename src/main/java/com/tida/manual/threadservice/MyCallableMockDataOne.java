@@ -9,7 +9,7 @@ import java.util.concurrent.Callable;
 //        };
 
 
-class MyCallable implements Callable<Integer>{
+class MyCallableMockDataOne implements Callable<Integer>{
 
     @Override
     public Integer call() throws Exception {

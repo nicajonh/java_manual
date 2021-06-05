@@ -1,4 +1,4 @@
-package com.tida.manual.toooltutoriol;/**
+package com.tida.manual.tooltutoriol;/**
  * Created by nicajonh on 2019/7/26.
  * Description ${TEXT}
  */
